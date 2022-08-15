@@ -14,7 +14,7 @@ disas: arch.o
 %: %.o
 	$(CC) $(filter %.o,$^) -o $@ $(LDFLAGS)
 
-%.o: %.s
+%.o: %.s as
 	./as $< $@
 
 arch.o: arch.c arch.h
