@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wshadow -Wextra -O3 -g
+CFLAGS = -Wall -Wshadow -Wextra -g
 LDFLAGS = 
 
 all: is as disas $(patsubst %.s,%.o,$(shell ls *.s))

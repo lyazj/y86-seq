@@ -977,6 +977,7 @@ void insert_imd(size_t size, uint64_t imd)
   expand_for(size);
   write_lab(pstat.pc);
   memcpy(&mem[pstat.pc], &imd, size);
+  pstat.pc += size;
 }
 
 void goto_pos(uint64_t pos)
